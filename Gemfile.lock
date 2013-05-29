@@ -18,8 +18,9 @@ GIT
       heroku-api
       rendezvous
 
-PATH
-  remote: ../learnery-theme
+GIT
+  remote: https://github.com/learnery/learnery-theme-railsgirls.git
+  revision: 7e79277552ec9a15612f85aa7bbde1e76b603d5a
   specs:
     learnery-theme (0.0.1)
 
