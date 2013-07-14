@@ -1,0 +1,84 @@
+@railsgirls-red: #D3360B;
+
+div.title{
+  background: @railsgirls-red;
+  padding: 30px;
+  text-align: center;
+}
+
+div.title h1{
+  font-size: 44px;
+  font-weight: bold;
+}
+
+div.title a:link,
+div.title a:link:hover,
+div.title a:visited,
+div.title a:visited:hover,
+div.title a:active,
+div.title a:active:hover,
+div.title 
+{
+  color: white;
+  text-decoration:none;
+}
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear,
+                  left bottom,
+                  left top,
+                  color-stop(0, @start),
+                  color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom, @start, @stop);
+  background: -moz-linear-gradient(center bottom, @start 0%, @stop 100%);
+  background: -o-linear-gradient(@stop, @start);
+}
+
+.navbar-inner{
+  background-color: @railsgirls-red;
+  .gradient(#CC350B, #7F2107, #CC350B);
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 0px;
+}
+
+.navbar-inner a:hover
+{
+  .gradient(#006699,  #003366, #006699);
+}
+
+
+.navbar-fixed-bottom {
+  background-color:white;
+  padding: 10px 5px;
+  border-top: 1px solid #CDCDCD;
+  text-align: center;
+}
+
+h1 small {
+  color: white;
+}
+
+.hero-unit h1 { color: @railsgirls-red; }
+.hero-unit h1 small { color: #6D859A; }
+.hero-unit p { color: #6D859A; }
+
+.hero-unit {
+  border: 1px solid #D6D6D6;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.my_wrapper_bottom {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D6D6;
+  border-radius: 6px 6px 6px 6px;
+  padding: 20px;
+}
+
+.my_wrapper_footer {
+  margin-top: 20px;
+  text-align: center;
+}
