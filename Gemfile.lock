@@ -1,7 +1,32 @@
 GIT
+  remote: git://github.com/drblinken/heroku-headless.git
+  revision: c55d729fe51691dd5f7beae1b1b02a97e5dcafe7
+  specs:
+    heroku-headless (0.2.0)
+      heroku-api
+      rendezvous
+
+GIT
+  remote: git://github.com/heroku/rails3_serve_static_assets.git
+  revision: 84910ceb4ca2851d650e66d3b22f5008acf253f8
+  specs:
+    rails3_serve_static_assets (0.0.1)
+
+GIT
+  remote: git://github.com/heroku/rails_log_stdout.git
+  revision: 01b5bcc572e3baed1618f4068920dd83bd491fb2
+  specs:
+    rails_log_stdout (0.0.1)
+
+GIT
+  remote: git://github.com/learnery/deployment.git
+  revision: 5ad55fda08d847fa1cbc8effb1ebbd93b68c2bb8
+  specs:
+    learnerydeploy (0.0.1)
+
+GIT
   remote: git://github.com/learnery/learnery.git
   revision: 3c79de0d565fea25e1c8a5161338c0dd87fa35c9
-  branch: master
   specs:
     learnery (0.0.1)
       capybara
@@ -89,6 +114,7 @@ GEM
       warden (~> 1.2.1)
     erubis (2.7.0)
     eventmachine (1.0.3)
+    excon (0.25.1)
     execjs (1.4.0)
       multi_json (~> 1.0)
     factory_girl (4.2.0)
@@ -101,6 +127,8 @@ GEM
     faye-websocket (0.4.7)
       eventmachine (>= 0.12.0)
     hashie (2.0.5)
+    heroku-api (0.3.13)
+      excon (~> 0.25.0)
     hike (1.2.3)
     http_parser.rb (0.5.3)
     httpauth (0.2.0)
@@ -194,6 +222,7 @@ GEM
       json (~> 1.4)
     redcarpet (3.0.0)
     ref (1.0.5)
+    rendezvous (0.0.2)
     rmagick (2.13.2)
     ruby-openid (2.2.3)
     sass (3.2.9)
@@ -245,13 +274,26 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  capybara
+  capybara_minitest_spec
   coffee-rails (~> 4.0.0)
+  database_cleaner
+  factory_girl_rails
+  heroku-headless!
   jbuilder (~> 1.2)
   jquery-rails
+  launchy
   learnery!
+  learnerydeploy!
+  minitest-spec-rails
+  pg
   rails (= 4.0.0)
+  rails3_serve_static_assets!
+  rails_log_stdout!
+  rake
   sass-rails (~> 4.0.0)
   sdoc
   sqlite3
+  therubyracer
   turbolinks
   uglifier (>= 1.3.0)

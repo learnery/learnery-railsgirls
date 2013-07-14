@@ -1,17 +1,55 @@
-source 'https://rubygems.org'
+ source 'https://rubygems.org'
+
+# dependency to learnery
+# uses local learnery if LEARNERY_LOCAL is set, e.g. with
+# export LEARNERY_LOCAL=../learnery-engine
+# please make sure to commit/push Gemfile.lock with reference
+# to github rather than local file!
+if ENV['LEARNERY_LOCAL']
+  gem 'learnery', :path => ENV['LEARNERY_LOCAL']
+else
+  gem 'learnery', :git => 'git://github.com/learnery/learnery.git'
+end
+
+# for travis deployment to heroku
+# added here because .gemspec does not support depending on git versions
+#http://stackoverflow.com/questions/6499410/ruby-gemspec-dependency-is-possible-have-a-git-branch-dependency
+  # forked for now because we need this:
+  # https://github.com/learnery/heroku-headless/commit/b5179227c710ac84e871b91699fd0fc355d43b28
+
+group :development, :test do
+  gem 'heroku-headless', github: 'drblinken/heroku-headless'
+  gem 'learnerydeploy',  github: 'learnery/deployment'
+end
+group :production do #heroku
+  # to enable static asset serving for rails4 on heroku
+  # https://devcenter.heroku.com/articles/rails4
+  gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
+  gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
+  # postgres for heroku
+  gem 'pg'
+  gem 'therubyracer', platforms: :ruby
+end
+
+
+group :test do
+  gem 'rake' # for travis, see http://about.travis-ci.org/docs/user/languages/ruby/
+  gem 'minitest-spec-rails'
+  gem 'capybara'
+  gem 'capybara_minitest_spec'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+end
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-if ENV['LEARNERY_LOCAL']
-  gem 'learnery', :path => ENV['LEARNERY_LOCAL']
-else
-  gem 'learnery', :git => 'git://github.com/learnery/learnery.git',
-                  :branch => 'master'
-end
-
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -35,8 +73,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 group :doc do
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', require: false
+  # bundle exec rake doc:rails generates the API under doc/api.
+  gem 'sdoc', require: false
 end
 
 # Use ActiveModel has_secure_password
