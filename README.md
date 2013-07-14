@@ -1,28 +1,31 @@
-# Learnery example app (variant: railsgirls)
+# Learnery Example App: "railsgirls"
 
-This example app is modeld after the railsgirls berlin site: Railsgirls
-log, red header, white body.
+Learnery is a rails engine you can use in your rails app to organize open learning events, like railsbridge, barcamps, user groups, meetups, hackathons. You can adapt it to your liking and deploy the app to heroku in a few simple steps.
 
-![learnery example app railsgirls](http://learnery.github.io/images/screenshot-4.png) 
+This example app shows the use of the learnery engine and
+gives you a good starting point for building your own app.
 
-[demo site for example app railsgirls](http://learnery-staging-railsgirls.herokuapp.com/)
+* [Repository](https://github.com/learnery/learnery-railsgirls)
+* [Demo Site](http://learnery-staging-railsgirls.herokuapp.com/)
+* Screenshot: 
 
-learnery is a rails engine for organizing learning events
-https://github.com/learnery/learnery
+![learnery in railsgirls app](http://learnery.github.io/images/screenshot-4.png)
 
 ## Installation
 
-If you want to start with this example app, just
-for the app on github, or clone it.
+Fork this repository https://github.com/learnery/learnery-railsgirls, for example
+into https://github.com/YOURNAME/learnery-railsgirls.  Then clone this repository
+to your development machine
 
-    $ git clone https://github.com/learnery/learnery-railsgirls.git <my-app-folder>
-    $ cd <my-app-folder>
-    $ bundle install
-    $ rake db:migrate
-    $ rails s
+    git clone https://github.com/YOURNAME/learnery-railsgirls my-learnery-app
+    cd my-learnery-app
+    bundle install
+    rake db:migrate
+    rails s
 
-See the documentation of learnery for more information about
-using different themes and adapting themes.
+See the documentation of learnery 
+https://github.com/learnery/learnery
+for more information about adapting this app.
 
 
 ## Fixing Problems in this example app
