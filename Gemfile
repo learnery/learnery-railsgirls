@@ -18,7 +18,7 @@ end
   # https://github.com/learnery/heroku-headless/commit/b5179227c710ac84e871b91699fd0fc355d43b28
 
 group :development, :test do
-  gem 'heroku-headless', github: 'drblinken/heroku-headless'
+  gem 'heroku-headless', github: 'learnery/heroku-headless'
   gem 'learnerydeploy',  github: 'learnery/deployment'
 end
 group :production do #heroku
