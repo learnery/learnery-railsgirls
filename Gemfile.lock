@@ -12,8 +12,8 @@ GIT
 
 GIT
   remote: git://github.com/learnery/deployment.git
-  revision: 270fcb95ddcab0902a7b68972f637a4944cb527e
-  ref: 270fcb95ddcab0902a7b68972f637a4944cb527e
+  revision: 0cb08124440e0e4a27ba4030d15d76e095199751
+  ref: 0cb08124440e0e4a27ba4030d15d76e095199751
   specs:
     learnerydeploy (0.0.1)
 

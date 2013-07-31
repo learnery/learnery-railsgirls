@@ -19,7 +19,7 @@ end
 
 group :development, :test do
   gem 'heroku-headless', '>= 0.2.1'
-  gem 'learnerydeploy', :git => 'git://github.com/learnery/deployment.git', ref: '270fcb95ddcab0902a7b68972f637a4944cb527e'
+  gem 'learnerydeploy', :git => 'git://github.com/learnery/deployment.git', ref: '0cb08124440e0e4a27ba4030d15d76e095199751'
 end
 group :production do #heroku
   # to enable static asset serving for rails4 on heroku
