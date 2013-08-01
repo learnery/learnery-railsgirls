@@ -7,3 +7,9 @@ script:
 after_success:
 - rake learnery:version
 - rake learnery:deploy["learnery-staging-railsgirls"]
+env:
+  global:
+    secure: |-
+      OhdlQWSybX/mSmp0zKxqd1BWODkgGiMg95mSShi1p4rtXwTdm9eJmDTl25wT
+      qgBx3JAC4Ltua8XPucWXFbm413WSJXv0v3q9rIm737XIaTNi8lUvCx4cP3By
+      nZwDNXBSroPBgLyB5cPBqgXyoEyYp23+4EaD64E6z382bobgxWI=
