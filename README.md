@@ -1,13 +1,14 @@
 # Learnery Example App: "railsgirls"
 
-Learnery is a rails engine you can use in your rails app to organize open learning events, like railsbridge, barcamps, user groups, meetups, hackathons. You can adapt it to your liking and deploy the app to heroku in a few simple steps.
+[Learnery](https://github.com/learnery/learnery) is a rails engine you can use in your rails app to organize open learning events, like railsbridge, barcamps, user groups, meetups, hackathons. You can adapt it to your liking and deploy the app to heroku in a few simple steps.
 
 This example app shows the use of the learnery engine and
-gives you a good starting point for building your own app.
+gives you a good starting point for building your own app. Check out the [Learnery](https://github.com/learnery/learnery) project for further documentation.
 
 * [Repository](https://github.com/learnery/learnery-railsgirls)
 * [Demo Site](http://learnery-staging-railsgirls.herokuapp.com/)
-* Screenshot: 
+* [![Build Status](https://travis-ci.org/learnery/learnery-railsgirls.png?branch=master)](https://travis-ci.org/learnery/learnery-railsgirls)
+* Screenshot:
 
 ![learnery in railsgirls app](http://learnery.github.io/images/screenshot-4.png)
 
@@ -23,7 +24,7 @@ to your development machine
     rake db:migrate
     rails s
 
-See the documentation of learnery 
+See the documentation of learnery
 https://github.com/learnery/learnery
 for more information about adapting this app.
 
